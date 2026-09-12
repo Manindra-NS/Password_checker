@@ -76,6 +76,166 @@ body{
 .check:active{
     background-color: rgb(241, 245, 192);
 }
+
+.result{
+    background-color: transparent;
+    display: flex;
+    position: absolute;
+    top:500px;
+    flex-wrap: wrap;
+    height: 500px;
+    width:80vw;
+    justify-self: center;
+}
+.strength{
+    background-color: transparent;
+    border: white solid 5px;
+    border-radius: 20px;
+    height:90%;
+    width:49%;
+    margin-right: 10px;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.others{
+    background-color: transparent;
+    border: white solid 5px;
+    border-radius: 20px;
+    height:90%;
+    width:47%;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---- shared panel bits ---- */
+
+.panel-heading{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: antiquewhite;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.icon-tick{
+    color: #7ee08a;
+}
+.icon-cross{
+    color: #ff6b6b;
+}
+
+/* ---- strength checklist ---- */
+
+.have-attributes{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.check-item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    color: antiquewhite;
+}
+.check-item i{
+    font-size: 20px;
+    width: 22px;
+    text-align: center;
+}
+.check-item.passed{
+    color: #dff5e1;
+}
+
+/* ---- others panel sections ---- */
+
+.other-section{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px dashed rgba(245, 240, 230, 0.25);
+}
+.other-section:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.score-row{
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+.score-value{
+    font-family: "Source Code Pro", monospace;
+    font-size: 42px;
+    color: antiquewhite;
+}
+.score-label{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 22px;
+    padding: 4px 16px;
+    border-radius: 14px;
+    border: 3px solid currentColor;
+}
+.label-weak{ color: #ff6b6b; }
+.label-moderate{ color: #ffb454; }
+.label-strong{ color: #d9e86c; }
+.label-strongest{ color: #7ee08a; }
+
+.entropy-row{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    color: rgba(250, 235, 215, 0.75);
+}
+.entropy-value{
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+.status-row{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+}
+.status-row i{
+    font-size: 20px;
+    width: 22px;
+    text-align: center;
+}
+.status-row.status-yes{
+    color: #7ee08a;
+}
+.status-row.status-no{
+    color: antiquewhite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #aurora-bg {
     position: fixed;
     top: 0; left: 0;

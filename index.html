@@ -22,18 +22,67 @@
         </div>
         <div class="password_entry_box">
             <input type="password" id="password" placeholder="Enter your password">
-            <button type="button" id="toggleBtn" aria-label="Show password"><i id="eye" class="fa-regular fa-eye"></i></button>
+            <button type="button" id="toggleBtn" aria-label="Show password"><i id="eye"
+                    class="fa-regular fa-eye"></i></button>
         </div>
         <button type="button" class="check">
             <h2 id="check_word">Check</h2>
         </button>
     </header>
     <main>
-        <div class="strength">
-            <h2 id="strength_word">Strength</h2>
-            <div class="strength_bar">
-                <div class="strength_fill" id="strength_fill"></div>
+        <div class="result">
+            <div class="strength">
+                <h3 class="panel-heading">Strength</h3>
+                <ul class="have-attributes">
+                    <li class="check-item" id="check-uppercase">
+                        <i class="fa-solid fa-xmark icon-cross"></i>
+                        <span>Has an uppercase letter</span>
+                    </li>
+                    <li class="check-item" id="check-lowercase">
+                        <i class="fa-solid fa-xmark icon-cross"></i>
+                        <span>Has a lowercase letter</span>
+                    </li>
+                    <li class="check-item" id="check-digit">
+                        <i class="fa-solid fa-xmark icon-cross"></i>
+                        <span>Has a digit</span>
+                    </li>
+                    <li class="check-item" id="check-special">
+                        <i class="fa-solid fa-xmark icon-cross"></i>
+                        <span>Has a special character</span>
+                    </li>
+                </ul>
             </div>
+            <div class="others">
+                <div class="score other-section">
+                    <h3 class="panel-heading">Score</h3>
+                    <div class="score-row">
+                        <span id="score-value" class="score-value">0</span>
+                        <span id="score-label" class="score-label label-weak">Weak</span>
+                    </div>
+                    <div class="entropy-row">
+                        <span class="entropy-caption">Entropy</span>
+                        <span id="entropy-value" class="entropy-value">0.0</span>
+                        <span class="entropy-unit">bits</span>
+                    </div>
+                </div>
+                <div class="common other-section">
+                    <h3 class="panel-heading">Common Password</h3>
+                    <div class="status-row" id="common-result">
+                        <i class="fa-solid fa-xmark icon-cross"></i>
+                        <span>No</span>
+                    </div>
+                </div>
+                <div class="breached other-section">
+                    <h3 class="panel-heading">Breached</h3>
+                    <div class="status-row" id="breached-result">
+                        <i class="fa-solid fa-xmark icon-cross"></i>
+                        <span>No</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <script src="index.js"></script>
         <script type="module" src="aurora-init.js"></script>
     </main>
